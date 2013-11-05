@@ -1,0 +1,16 @@
+{
+  "name": "PROJECT-NAME",
+  "private": "true",
+  "version": "0.0.0",
+  "devDependencies": {
+    "browserify": "",
+    "grunt": "",
+    "grunt-browserify": "",
+    "grunt-contrib-nodeunit": "",
+    "grunt-contrib-uglify": ""
+  },
+  "dependencies": {
+    "express": "",
+    "browserify-middleware": ""
+  }
+}
