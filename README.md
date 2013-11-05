@@ -62,12 +62,15 @@ Curated list of my development tools, libraries and processes. Minimalisim, and 
 * [grunt-jsdoc](https://npmjs.org/package/grunt-jsdoc) - Integrates jsdoc3 generation into your Grunt build.
 
 ## Libraries
+
 ### Core
 * [Lo-Dash](http://lodash.com/) - Utilities, functional patterns.
 * [Moment.js](http://momentjs.com/) - Date library for parsing, validating, manipulating, and formatting dates.
+
 ### Browser
 * [jQuery](http://jquery.com/) - HTML document traversal and manipulation, event handling, animation, and Ajax API that works across a multitude of browsers.
 * [Bootstrap](http://getbootstrap.com/) - Sleek, intuitive, and powerful mobile first front-end framework for faster and easier web development.
+
 ### Server
 * [express](http://expressjs.com/) - Express is a minimal and flexible node.js web application framework, providing a robust set of features for building single and multi-page, and hybrid web applications.
     * [browserify-middleware](https://github.com/ForbesLindesay/browserify-middleware) - Server automatically browserifies modules.
