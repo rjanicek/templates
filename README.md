@@ -1,5 +1,5 @@
-Richard Janicek's Workflow & Templates
-======================================
+Templates & Workflow
+====================
 
 Curated list of my development tools, libraries and processes. Minimalisim, and functional styles are preferred.
 
