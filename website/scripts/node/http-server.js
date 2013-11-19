@@ -11,5 +11,5 @@ var PUBLIC_PATH = path.join(__dirname, '../../public');
 var app = express();
 app.use(express.compress());
 app.use(express.static(PUBLIC_PATH));
-app.get('/index.js', browserify('../browser/index.js'));
+app.get('/index.js', browserify('../browser/index.js', { transform: ['rfileify'] }));
 app.listen(HTTP_SERVER_PORT);

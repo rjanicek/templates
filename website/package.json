@@ -4,13 +4,22 @@
   "version": "0.0.0",
   "devDependencies": {
     "browserify": "",
-    "grunt": "",
-    "grunt-browserify": "",
-    "grunt-contrib-nodeunit": "",
-    "grunt-contrib-uglify": ""
+    "glob": "",
+    "lodash.filter": "",
+    "nodeunit": ""
   },
   "dependencies": {
+    "browserify-middleware": "",
     "express": "",
-    "browserify-middleware": ""
+    "rfile": "",
+    "rfileify": ""
+  },
+  "scripts": {
+    "build": "npm run build-browserify && npm run build-uglify",
+    "build-browserify": "browserify -t rfileify scripts/browser/index.js > public/index.js",
+    "build-debug": "browserify -d -t rfileify scripts/browser/index.js > public/index.js",
+    "build-uglify": "uglifyjs public/index.js -m -c -o public/index.js",
+    "start": "node index",
+    "test": "node test"
   }
 }
