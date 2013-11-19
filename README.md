@@ -1,7 +1,7 @@
 Templates & Workflow
 ====================
 
-Curated list of my development tools, libraries and processes. Minimalisim, and functional styles are preferred.
+Curated list of my development tools, libraries and processes. Minimalism, and functional styles are preferred.
 
 ## Development Tools
 
@@ -44,13 +44,19 @@ Curated list of my development tools, libraries and processes. Minimalisim, and 
                 "white": true
 ```
 * [Node.js](http://nodejs.org/) - JavaScript platform.
-    * [NPM Status](http://status.npmjs.org/) - In rare case NPM goes down, you can get info here.
+* [NPM](https://npmjs.org/)
+    * [NPM Status](http://status.npmjs.org/) - In case NPM goes down, you can get info here.
+    * [registry.npmjs.eu](http://npmjs.eu/) - NPM mirror.
 * [Browserify](http://browserify.org/) - Write your browser code with node.js-style requires.
     * Why? Require.js configurations are unwanted complexity. Async module loading was not a big enough benefit. Easier sharing of core modules between client and server is sweet.
-* [Grunt](http://gruntjs.com/) - The JavaScript Task Runner.
-    * [grunt-browserify](https://github.com/jmreidy/grunt-browserify)
-    * [grunt-contrib-nodeunit](https://github.com/gruntjs/grunt-contrib-nodeunit)
-    * [grunt-contrib-uglify](https://github.com/gruntjs/grunt-contrib-uglify)
+
+    * Just use NPM run instead.
+
+### Tasks
+* `NPM run` - just say no to [Grunt](http://gruntjs.com/)
+    * Simpler then Grunt
+    * Can use modules directly. Grunt depends on special interface modules so you need to learn the module and the Grunt interface (and Grunt).
+    * [glob](https://npmjs.org/package/glob) - Match files using the patterns the shell uses, like stars and stuff.
 
 ### Tests
 * [Nodeunit](https://github.com/caolan/nodeunit) - Simple syntax, powerful tools. Nodeunit provides easy async unit testing for node.js and the browser.
@@ -59,17 +65,22 @@ Curated list of my development tools, libraries and processes. Minimalisim, and 
 ### Documentation
 * [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
 * [JSDoc](http://en.wikipedia.org/wiki/JSDoc) - JSDoc is a markup language used to annotate JavaScript source code files.
-* [grunt-jsdoc](https://npmjs.org/package/grunt-jsdoc) - Integrates jsdoc3 generation into your Grunt build.
+    * [jsdoc](https://github.com/jsdoc3/jsdoc) - An API documentation generator for JavaScript. http://usejsdoc.org
 
 ## Libraries
 
 ### Core
 * [Lo-Dash](http://lodash.com/) - Utilities, functional patterns.
+* [mori](http://swannodette.github.io/mori/) - A library for using ClojureScript's persistent data structures and supporting API from the comfort of vanilla JavaScript.
 * [Moment.js](http://momentjs.com/) - Date library for parsing, validating, manipulating, and formatting dates.
+* [JS-quantities](https://github.com/gentooboontoo/js-quantities) - Javascript port of Ruby Units for quantity calculation and unit conversion.
+    * Beware, point and pica units are Traditional American instead of modern Desk Top Publishing standard of 72 / inch.
+* [hpdf.js](https://github.com/manuels/hpdf.js) - Best PDF maker.
 
 ### Browser
 * [jQuery](http://jquery.com/) - HTML document traversal and manipulation, event handling, animation, and Ajax API that works across a multitude of browsers.
 * [Bootstrap](http://getbootstrap.com/) - Sleek, intuitive, and powerful mobile first front-end framework for faster and easier web development.
+    * [Bootstrap CDN](http://www.bootstrapcdn.com/) - The recommended CDN for Bootstrap, Font Awesome, and Bootswatch.
 
 ### Server
 * [express](http://expressjs.com/) - Express is a minimal and flexible node.js web application framework, providing a robust set of features for building single and multi-page, and hybrid web applications.
@@ -83,3 +94,7 @@ Curated list of my development tools, libraries and processes. Minimalisim, and 
 ## Profiling
 
 * [Console API](https://developers.google.com/chrome-developer-tools/docs/console-api) - console.time, console.timeEnd
+
+## Recommended Reading
+* [task automation with npm run](http://substack.net/task_automation_with_npm_run)
+* [Functional haXe](http://blackdog66.wordpress.com/toolbox/haxe-the-functional-parts/)
