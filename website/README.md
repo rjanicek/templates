@@ -2,8 +2,8 @@ Website Template
 ================
 
 `index.js`      - Main Node.js script that runs on server.  
-`package.json`  - [reference](https://npmjs.org/doc/json.html)
-`test.js`       - Test runner.
+`package.json`  - [reference](https://npmjs.org/doc/json.html)  
+`test.js`       - Test runner.  
 `/public`       - Public website files.  
 `/scripts`      - JavaScript modules.  
 `/scripts/browser`  - Browser CommonJS modules. These run only in the browser client.  
