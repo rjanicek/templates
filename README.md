@@ -10,7 +10,9 @@ Curated list of my development tools, libraries and processes. Minimalism, and f
 * [TortoiseGit](https://code.google.com/p/tortoisegit/) - Interface to Git Version Control for Windows.
     * [msysgit](http://msysgit.github.io/) - Git for Windows.
 * [Console](http://sourceforge.net/projects/console/) - Console is a Windows console window enhancement.
-    * Fixes special characters used by some node modules.
+    * Some Node modules display special characters on the console that Windows is missing. To fix this:
+        * Install `DejaVuSansMono.ttf` front from [DejaVu fonts](http://dejavu-fonts.org/wiki/Download)
+        * Change font in Console settings to `DejaVuSansMono.ttf`.
 * [Sublime Text 2](http://www.sublimetext.com/)
     * [Sublime Text Package Control](https://sublime.wbond.net/)
     * [Doc​Blockr](https://github.com/spadgos/sublime-jsdocs)
@@ -53,6 +55,7 @@ Curated list of my development tools, libraries and processes. Minimalism, and f
     * [registry.npmjs.eu](http://npmjs.eu/) - NPM mirror.
 * [Browserify](http://browserify.org/) - Write your browser code with node.js-style requires.
     * Why? Require.js configurations are unwanted complexity. Async module loading was not a big enough benefit. Easier sharing of core modules between client and server is sweet.
+* [nodemon](http://rss.thepiratebay.org/207) - Restarts node if files change, for use during development of a node.js app.
 
 ### Tasks
 * [NPM](https://npmjs.org)
@@ -115,4 +118,5 @@ Curated list of my development tools, libraries and processes. Minimalism, and f
 
 ## Formative Articles:
 * [task automation with npm run](http://substack.net/task_automation_with_npm_run)
-* [Functional haXe](http://blackdog66.wordpress.com/toolbox/haxe-the-functional-parts/)
+* [Functional Haxe](http://blackdog66.wordpress.com/toolbox/haxe-the-functional-parts/)
+* [substack / stream-handbook](https://github.com/substack/stream-handbook)
