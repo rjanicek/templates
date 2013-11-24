@@ -90,6 +90,15 @@ Curated list of my development tools, libraries and processes. Minimalism, and f
 
 ### Core
 * [Lo-Dash](http://lodash.com/) - Utilities, functional patterns.
+    * Template settings that work well with Sublime Text
+
+```javascript
+    _.templateSettings = {
+        'evaluate' : /<~([\s\S]+?)~>/g,     // <~ ~>
+        'interpolate' : /<=([\s\S]+?)~>/g,  // <= ~>
+        'escape' : /<-([\s\S]+?)~>/g        // <- ~>
+    };
+```
 * [mori](http://swannodette.github.io/mori/) - A library for using ClojureScript's persistent data structures and supporting API from the comfort of vanilla JavaScript.
 * [Moment.js](http://momentjs.com/) - Date library for parsing, validating, manipulating, and formatting dates.
 * [JS-quantities](https://github.com/gentooboontoo/js-quantities) - Javascript port of Ruby Units for quantity calculation and unit conversion.
@@ -100,6 +109,7 @@ Curated list of my development tools, libraries and processes. Minimalism, and f
 * [jQuery](http://jquery.com/) - HTML document traversal and manipulation, event handling, animation, and Ajax API that works across a multitude of browsers.
 * [Bootstrap](http://getbootstrap.com/) - Sleek, intuitive, and powerful mobile first front-end framework for faster and easier web development.
     * [Bootstrap CDN](http://www.bootstrapcdn.com/) - The recommended CDN for Bootstrap, Font Awesome, and Bootswatch.
+* [cookie-component](https://npmjs.org/package/cookie-component) - Client-Side Cookie Manipulation API
 
 ### Server
 * [express](http://expressjs.com/) - Express is a minimal and flexible node.js web application framework, providing a robust set of features for building single and multi-page, and hybrid web applications.
