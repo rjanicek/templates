@@ -15,7 +15,7 @@ Tests can go anywhere inside `scripts` directory and end with `_test.js`
 Two ways to build browser client modules:
 
 1. They are automatically built by Express [browserify-middleware](https://github.com/ForbesLindesay/browserify-middleware). Just save changes and refresh browser. This works well for development.
-2. Grunt tasks to build client modules. You may prefer to use this for production.
+2. NPM scripts to build client modules. You may prefer to use this for production.
 
 All of the following commands should be run from command prompt inside website directory.
 

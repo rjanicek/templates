@@ -22,6 +22,11 @@ Curated list of my development tools, libraries and processes. Minimalism, and f
     * [Sublime​Linter](https://github.com/SublimeLinter/SublimeLinter)
         * JSHint Options
 ```javascript
+/* jshint 
+    browser: true, jquery: true, node: true,
+    bitwise: true, camelcase: true, curly: true, eqeqeq: true, es3: true, evil: true, forin: true, immed: true, indent: 4, latedef: true, newcap: true, noarg: true, noempty: true, nonew: true, quotmark: single, regexdash: true, strict: true, sub: true, trailing: true, undef: true, unused: vars, white: true
+*/
+
                 "browser": true,
                 "jquery": true,
                 "node": true,
@@ -99,6 +104,7 @@ Curated list of my development tools, libraries and processes. Minimalism, and f
         'escape' : /<-([\s\S]+?)~>/g        // <- ~>
     };
 ```
+* [Lazy.js](http://danieltao.com/lazy.js/) - Functional patterns faster then Lo-Dash because of lazy evaluation.
 * [mori](http://swannodette.github.io/mori/) - A library for using ClojureScript's persistent data structures and supporting API from the comfort of vanilla JavaScript.
 * [Moment.js](http://momentjs.com/) - Date library for parsing, validating, manipulating, and formatting dates.
 * [JS-quantities](https://github.com/gentooboontoo/js-quantities) - Javascript port of Ruby Units for quantity calculation and unit conversion.
@@ -126,7 +132,7 @@ Curated list of my development tools, libraries and processes. Minimalism, and f
 
 * [Console API](https://developers.google.com/chrome-developer-tools/docs/console-api) - console.time, console.timeEnd
 
-## Formative Articles:
+## Formative Articles
 * [task automation with npm run](http://substack.net/task_automation_with_npm_run)
 * [Functional Haxe](http://blackdog66.wordpress.com/toolbox/haxe-the-functional-parts/)
 * [substack / stream-handbook](https://github.com/substack/stream-handbook)
