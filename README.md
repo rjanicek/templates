@@ -13,46 +13,22 @@ Curated list of my development tools, libraries and processes. Minimalism, and f
     * Some Node modules display special characters on the console that Windows is missing. To fix this:
         * Install `DejaVuSansMono.ttf` front from [DejaVu fonts](http://dejavu-fonts.org/wiki/Download)
         * Change font in Console settings to `DejaVuSansMono.ttf`.
-* [Sublime Text 2](http://www.sublimetext.com/)
+        * Node.js Console shortcut `...\Console.exe -r "C:\Program Files\nodejs\nodevars.bat" -d d:\projects -w node.js`
+* [Sublime Text](http://www.sublimetext.com/)
     * [Sublime Text Package Control](https://sublime.wbond.net/)
     * [Doc​Blockr](https://github.com/spadgos/sublime-jsdocs)
     * [HTML5](https://github.com/mrmartineau/HTML5)
     * [Markdown Preview](https://github.com/revolunet/sublimetext-markdown-preview)
     * [Pretty JSON](https://github.com/dzhibas/SublimePrettyJson)
     * [Sublime​Linter](https://github.com/SublimeLinter/SublimeLinter)
-        * JSHint Options
+    * [SublimeLinter-jshint](https://github.com/SublimeLinter/SublimeLinter-jshint) (Sublime Text 3 only)
+        * You will need to install JSHint `npm install -g jshint` (Sublime Text 3 only)
+        * JSHint Options: add to top of individual .js files instead of global configuration
 ```javascript
 /* jshint 
     browser: true, jquery: true, node: true,
-    bitwise: true, camelcase: true, curly: true, eqeqeq: true, es3: true, evil: true, forin: true, immed: true, indent: 4, latedef: true, newcap: true, noarg: true, noempty: true, nonew: true, quotmark: single, regexdash: true, strict: true, sub: true, trailing: true, undef: true, unused: vars, white: true
+    bitwise: true, camelcase: true, curly: true, eqeqeq: true, es3: true, evil: true, expr: true, forin: true, immed: true, indent: 4, latedef: true, newcap: true, noarg: true, noempty: true, nonew: true, quotmark: single, regexdash: true, strict: true, sub: true, trailing: true, undef: true, unused: vars, white: true
 */
-
-                "browser": true,
-                "jquery": true,
-                "node": true,
-
-                "bitwise": true,
-                "camelcase": true,
-                "curly": true,
-                "eqeqeq": true,
-                "es3": true,
-                "evil": true,
-                "forin": true,
-                "immed": true,
-                "indent": 4,
-                "latedef": true,
-                "newcap": true,
-                "noarg": true,
-                "noempty": true,
-                "nonew": true,
-                "quotmark": "single",
-                "regexdash": true,
-                "strict": true,
-                "sub": true,
-                "trailing": true,
-                "undef": true,
-                "unused": "vars",
-                "white": true
 ```
 * [Node.js](http://nodejs.org/) - JavaScript platform.
 * [NPM](https://npmjs.org/)
@@ -122,6 +98,7 @@ Curated list of my development tools, libraries and processes. Minimalism, and f
     * [browserify-middleware](https://github.com/ForbesLindesay/browserify-middleware) - Server automatically browserifies modules.
         * Use environment variable NODE_ENV=production to set sensible defaults in production.
 * [LevelUP](https://github.com/rvagg/node-levelup) - Fast & simple storage - a Node.js-style LevelDB wrapper.
+* [Nodemailer](http://www.nodemailer.com/) - Nodemailer is an easy to use module to send e-mails with Node.JS.
 
 ## Server Tools
 * [http-proxy](https://npmjs.org/package/http-proxy) - A full-featured http reverse proxy for node.js
