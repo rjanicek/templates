@@ -9,11 +9,9 @@ Curated list of my development tools, libraries and processes. Minimalism, and f
 
 * [TortoiseGit](https://code.google.com/p/tortoisegit/) - Interface to Git Version Control for Windows.
     * [msysgit](http://msysgit.github.io/) - Git for Windows.
-* [Console](http://sourceforge.net/projects/console/) - Console is a Windows console window enhancement.
-    * Some Node modules display special characters on the console that Windows is missing. To fix this:
-        * Install `DejaVuSansMono.ttf` front from [DejaVu fonts](http://dejavu-fonts.org/wiki/Download)
-        * Change font in Console settings to `DejaVuSansMono.ttf`.
-        * Node.js Console shortcut `...\Console.exe -r "C:\Program Files\nodejs\nodevars.bat" -d d:\projects -w node.js`
+* [ConEmu](https://code.google.com/p/conemu-maximus5/) - Better console for Windows.
+    * Better then [Console](http://sourceforge.net/projects/console/) because activly maintained and fonts work with Node.js.
+    * Node.js shortcut `...\ConEmu\ConEmu64.exe /title node.js /cmd cmd /k "C:\Program Files\nodejs\nodevars.bat"`
 * [Sublime Text](http://www.sublimetext.com/)
     * [Sublime Text Package Control](https://sublime.wbond.net/)
     * [Doc​Blockr](https://github.com/spadgos/sublime-jsdocs)
@@ -101,6 +99,7 @@ Curated list of my development tools, libraries and processes. Minimalism, and f
 * [Nodemailer](http://www.nodemailer.com/) - Nodemailer is an easy to use module to send e-mails with Node.JS.
 
 ## Server Tools
+* [StartSSL](http://www.startssl.com/) - Free Class 1 SSL
 * [http-proxy](https://npmjs.org/package/http-proxy) - A full-featured http reverse proxy for node.js
 * [Forever](https://github.com/nodejitsu/forever) - A simple CLI tool for ensuring that a given script runs continuously.
     * `sudo NODE_ENV=production forever start -a -l forever.log -o out.log -e err.log index.js`
