@@ -3,21 +3,22 @@
   "private": "true",
   "version": "0.0.0",
   "devDependencies": {
-    "browserify": "~2.35.4",
-    "glob": "~3.2.7",
-    "lodash.filter": "~2.3.0",
-    "nodeunit": "~0.8.2"
+    "browserify": "^6.0.3",
+    "glob": "^4.0.6",
+    "lodash": "^2.4.1",
+    "nodeunit": "^0.9.0",
+    "uglify-js": "^2.4.15"
   },
   "dependencies": {
-    "browserify-middleware": "~1.19.0",
-    "express": "~3.4.4",
-    "rfile": "~1.0.0",
-    "rfileify": "~1.3.1"
+    "brfs": "^1.2.0",
+    "browserify-middleware": "^4.1.0",
+    "compression": "^1.1.0",
+    "express": "^4.9.7"
   },
   "scripts": {
     "build": "npm run build-browserify && npm run build-uglify",
-    "build-browserify": "browserify -t rfileify scripts/browser/index.js > public/index.js",
-    "build-debug": "browserify -d -t rfileify scripts/browser/index.js > public/index.js",
+    "build-browserify": "browserify -t brfs scripts/browser/index.js > public/index.js",
+    "build-debug": "browserify -d -t brfs scripts/browser/index.js > public/index.js",
     "build-uglify": "uglifyjs public/index.js -m -c -o public/index.js",
     "start": "node index",
     "test": "node test"

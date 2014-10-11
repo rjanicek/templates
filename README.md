@@ -19,9 +19,11 @@ Curated list of my development tools, libraries and processes. Minimalism, and f
     * [Markdown Preview](https://github.com/revolunet/sublimetext-markdown-preview)
     * [Pretty JSON](https://github.com/dzhibas/SublimePrettyJson)
     * [Sublime​Linter](https://github.com/SublimeLinter/SublimeLinter)
-    * [SublimeLinter-jshint](https://github.com/SublimeLinter/SublimeLinter-jshint) (Sublime Text 3 only)
-        * You will need to install JSHint `npm install -g jshint` (Sublime Text 3 only)
-        * JSHint Options: add to top of individual .js files instead of global configuration
+        * [SublimeLinter-jshint](https://github.com/SublimeLinter/SublimeLinter-jshint) (Sublime Text 3 only)
+            * You will need to install JSHint `npm install -g jshint` (Sublime Text 3 only)
+            * JSHint Options: add to top of individual .js files instead of global configuration
+        * [SublimeLinter-csslint](https://github.com/SublimeLinter/SublimeLinter-csslint)
+            * You will need to install csslint `npm install -g csslint`
 ```javascript
 /* jshint 
     browser: true, jquery: true, node: true,
@@ -58,7 +60,7 @@ Curated list of my development tools, libraries and processes. Minimalism, and f
     * [jsdoc](https://github.com/jsdoc3/jsdoc) - An API documentation generator for JavaScript. http://usejsdoc.org
 
 ### Components
-* [rfile](https://npmjs.org/package/rfile) & [rfileify](https://npmjs.org/package/rfileify)
+* [brfs](https://github.com/substack/brfs) - browserify fs.readFileSync() static asset inliner
 * Encapsulate all the things for the component.
 * Inject into dom with jQuery.
 * Component can have own package.json and dependencies.
