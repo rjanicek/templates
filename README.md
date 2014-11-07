@@ -36,7 +36,8 @@ Curated list of my development tools, libraries and processes. Minimalism, and f
     * [registry.npmjs.eu](http://npmjs.eu/) - NPM mirror.
 * [Browserify](http://browserify.org/) - Write your browser code with node.js-style requires.
     * Why? Require.js configurations are unwanted complexity. Async module loading was not a big enough benefit. Easier sharing of core modules between client and server is sweet.
-* [nodemon](http://rss.thepiratebay.org/207) - Restarts node if files change, for use during development of a node.js app.
+* [nodemon](http://nodemon.io/) - Restarts node if files change, for use during development of a node.js app.
+    * `npm install -g nodemon`
 
 ### Tasks
 * [NPM](https://npmjs.org)
@@ -68,6 +69,8 @@ Curated list of my development tools, libraries and processes. Minimalism, and f
 * Why? Works good enough and seems simpler then [Component](http://component.io/) or [Bower](http://bower.io/).
 
 ## Libraries
+
+### [nipster](http://eirikb.github.io/nipster/) - npm + github ranked module search tool
 
 ### Core
 * [Lo-Dash](http://lodash.com/) - Utilities, functional patterns.
