@@ -14,8 +14,7 @@ Curated list of my development tools, libraries and processes. Minimalism, and f
     * Node.js shortcut `...\ConEmu\ConEmu64.exe /title node.js /cmd cmd /k "C:\Program Files\nodejs\nodevars.bat"`
 * [Sublime Text](http://www.sublimetext.com/)
     * [Sublime Text Package Control](https://sublime.wbond.net/)
-    * [Doc​Blockr](https://github.com/spadgos/sublime-jsdocs)
-    * [HTML5](https://github.com/mrmartineau/HTML5)
+    * [Java​Script​Next - ES6 Syntax](https://github.com/Benvie/JavaScriptNext.tmLanguage)
     * [Markdown Preview](https://github.com/revolunet/sublimetext-markdown-preview)
     * [Pretty JSON](https://github.com/dzhibas/SublimePrettyJson)
     * [Sublime​Linter](https://github.com/SublimeLinter/SublimeLinter)
@@ -27,17 +26,21 @@ Curated list of my development tools, libraries and processes. Minimalism, and f
 ```javascript
 /* jshint 
     browser: true, jquery: true, node: true,
-    bitwise: true, camelcase: true, curly: true, eqeqeq: true, es3: true, evil: true, expr: true, forin: true, immed: true, indent: 4, latedef: true, newcap: true, noarg: true, noempty: true, nonew: true, quotmark: single, regexdash: true, strict: true, sub: true, trailing: true, undef: true, unused: vars, white: true
+    bitwise: true, camelcase: true, curly: true, eqeqeq: true, esnext: true, es3: true, evil: true, expr: true, forin: true, immed: true, indent: 4, latedef: true, newcap: true, noarg: true, noempty: true, nonew: true, quotmark: single, regexdash: true, strict: true, sub: true, trailing: true, undef: true, unused: vars, white: true
 */
 ```
-* [Node.js](http://nodejs.org/) - JavaScript platform.
+* [io.js](https://iojs.org/) - JavaScript platform.
+    * Prefer it to node.js, is stable, is faster, is more active.
 * [NPM](https://npmjs.org/)
     * [NPM Status](http://status.npmjs.org/) - In case NPM goes down, you can get info here.
     * [registry.npmjs.eu](http://npmjs.eu/) - NPM mirror.
 * [Browserify](http://browserify.org/) - Write your browser code with node.js-style requires.
     * Why? Require.js configurations are unwanted complexity. Async module loading was not a big enough benefit. Easier sharing of core modules between client and server is sweet.
-* [nodemon](http://nodemon.io/) - Restarts node if files change, for use during development of a node.js app.
-    * `npm install -g nodemon`
+* [Babel](https://babeljs.io/) - ES6 to ES5 transpiler.
+* [node-supervisor](https://github.com/isaacs/node-supervisor) - Restarts io.js if files change.
+    * `npm install --save supervisor`
+    * Works better then Nodemon.
+    * Can be installed as a local dependency.
 
 ### Tasks
 * [NPM](https://npmjs.org)
@@ -112,6 +115,11 @@ Curated list of my development tools, libraries and processes. Minimalism, and f
 ## Profiling
 
 * [Console API](https://developers.google.com/chrome-developer-tools/docs/console-api) - console.time, console.timeEnd
+
+## Style
+* Always use `undefined` instead of `null`. This helps reduce ambiguity and errors.
+* Avoid using `new` and `this` unless it's part of an external API. Use functions, closures, and object literals instead of classes.
+* Describe behaviour in callback names, ie `returnErrorAndData` is a callback that will be called once and contains two args, `error` and `data`.
 
 ## Formative Articles
 * [task automation with npm run](http://substack.net/task_automation_with_npm_run)
