@@ -1,21 +1,25 @@
 /* jshint 
     browser: true, jquery: true, node: true,
-    bitwise: true, camelcase: true, curly: true, eqeqeq: true, es3: true, evil: true, expr: true, forin: true, immed: true, indent: 4, latedef: true, newcap: true, noarg: true, noempty: true, nonew: true, quotmark: single, regexdash: true, strict: true, sub: true, trailing: true, undef: true, unused: vars, white: true
+    bitwise: true, camelcase: true, curly: true, eqeqeq: true, esversion: 6, evil: true, expr: true, forin: true, immed: true, indent: 4, latedef: true, newcap: true, noarg: true, noempty: true, nonew: true, quotmark: single, regexdash: true, strict: true, sub: true, trailing: true, undef: true, unused: vars, white: true
 */
 
 'use strict';
 
-var HTTP_SERVER_PORT = 8080;
+const HTTP_SERVER_PORT = 8888;
 
-var browserify = require('browserify-middleware');
-var compression = require('compression');
-var express = require('express');
-var path = require('path');
+const browserifyMiddleware = require('browserify-middleware');
+const babelify = require('babelify');
+const compression = require('compression');
+const express = require('express');
+const path = require('path');
 
-var PUBLIC_PATH = path.join(__dirname, '../../public');
+const PUBLIC_PATH = path.join(__dirname, '../../public');
 
-var app = express();
+const app = express();
 app.use(compression());
 app.use(express.static(PUBLIC_PATH));
-app.get('/index.js', browserify(path.join(__dirname, '../browser/index.js'), { transform: ['brfs'] }));
+
+// use only while developing with es6 browser, comment out and use 'npm build' for best browser compatability
+app.get('/index.js', browserifyMiddleware(path.join(__dirname, '../browser/index.js'), { transform: ['brfs', babelify]}));
+
 app.listen(HTTP_SERVER_PORT);

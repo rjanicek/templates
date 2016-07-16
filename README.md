@@ -26,10 +26,10 @@ Curated list of my development tools, libraries and processes. Minimalism, and f
 ```javascript
 /* jshint 
     browser: true, jquery: true, node: true,
-    bitwise: true, camelcase: true, curly: true, eqeqeq: true, esnext: true, es3: true, evil: true, expr: true, forin: true, immed: true, indent: 4, latedef: true, newcap: true, noarg: true, noempty: true, nonew: true, quotmark: single, regexdash: true, strict: true, sub: true, trailing: true, undef: true, unused: vars, white: true
+    bitwise: true, camelcase: true, curly: true, eqeqeq: true, esversion: 6, evil: true, expr: true, forin: true, immed: true, indent: 4, latedef: true, newcap: true, noarg: true, noempty: true, nonew: true, quotmark: single, regexdash: true, strict: true, sub: true, trailing: true, undef: true, unused: vars, white: true
 */
 ```
-* [io.js](https://iojs.org/) - JavaScript platform.
+* [node.js](https://nodejs.org/) - JavaScript platform.
     * Prefer it to node.js, is stable, is faster, is more active.
 * [NPM](https://npmjs.org/)
     * [NPM Status](http://status.npmjs.org/) - In case NPM goes down, you can get info here.
@@ -55,7 +55,7 @@ Curated list of my development tools, libraries and processes. Minimalism, and f
         * Grunt depends on special interface modules so you need to learn the module and the module's Grunt interface (and Grunt).
 
 ### Tests
-* [Nodeunit](https://github.com/caolan/nodeunit) - Simple syntax, powerful tools. Nodeunit provides easy async unit testing for node.js and the browser.
+* [Tape](https://github.com/substack/tape) - tap-producing test harness for node and browsers
     * Why? It's simple, and has robust async support.
 
 ### Documentation
@@ -86,12 +86,11 @@ Curated list of my development tools, libraries and processes. Minimalism, and f
         'escape' : /<-([\s\S]+?)~>/g        // <- ~>
     };
 ```
-* [Lazy.js](http://danieltao.com/lazy.js/) - Functional patterns faster then Lo-Dash because of lazy evaluation.
-* [mori](http://swannodette.github.io/mori/) - A library for using ClojureScript's persistent data structures and supporting API from the comfort of vanilla JavaScript.
 * [Moment.js](http://momentjs.com/) - Date library for parsing, validating, manipulating, and formatting dates.
 * [JS-quantities](https://github.com/gentooboontoo/js-quantities) - Javascript port of Ruby Units for quantity calculation and unit conversion.
     * Beware, point and pica units are Traditional American instead of modern Desk Top Publishing standard of 72 / inch.
 * [hpdf.js](https://github.com/manuels/hpdf.js) - Best PDF maker.
+* [qs](https://github.com/ljharb/qs) - A querystring parser with nesting support.
 
 ### Browser
 * [jQuery](http://jquery.com/) - HTML document traversal and manipulation, event handling, animation, and Ajax API that works across a multitude of browsers.
@@ -107,6 +106,8 @@ Curated list of my development tools, libraries and processes. Minimalism, and f
 * [Nodemailer](http://www.nodemailer.com/) - Nodemailer is an easy to use module to send e-mails with Node.JS.
 
 ## Server Tools
+* [now](https://zeit.co/now) - realtime node.js deployments
+* [Let’s Encrypt](https://letsencrypt.org/) - Free SSL
 * [StartSSL](http://www.startssl.com/) - Free Class 1 SSL
 * [http-proxy](https://npmjs.org/package/http-proxy) - A full-featured http reverse proxy for node.js
 * [Forever](https://github.com/nodejitsu/forever) - A simple CLI tool for ensuring that a given script runs continuously.
