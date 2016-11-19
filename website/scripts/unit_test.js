@@ -5,8 +5,9 @@
 
 'use strict';
 
-exports.should_have_some_tests = test => {
-    test.expect(1);
-    test.ok(true);
-    test.done();
-};
+const test = require('tape');
+
+test('should have some tests', t => {
+    t.plan(1);
+    t.ok(true);
+});

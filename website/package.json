@@ -1,24 +1,20 @@
 {
-  "name": "PROJECT-NAME",
-  "private": "true",
-  "version": "0.0.0",
   "dependencies": {
-    "babel-preset-es2015": "6.9.0",
+    "babel-preset-latest": "6.16.0",
     "babelify": "7.3.0",
     "brfs": "1.4.3",
-    "browserify": "13.0.1",
-    "browserify-middleware": "7.0.0",
+    "browserify": "13.1.1",
+    "browserify-middleware": "7.1.0",
     "compression": "1.6.2",
     "express": "4.14.0",
-    "glob": "7.0.5",
-    "lodash": "4.13.1",
-    "nodeunit": "0.9.1",
-    "uglify-js": "2.7.0"
+    "glob": "7.1.1",
+    "tape": "4.6.2",
+    "uglify-js": "2.7.4"
   },
   "scripts": {
     "build": "npm run build-browserify && npm run build-uglify",
-    "build-browserify": "browserify --transform brfs -g [ babelify --presets [ es2015 ] ] scripts/browser/index.js > public/index.js",
-    "build-debug": "browserify --debug --transform brfs -g [ babelify --presets [ es2015 ] ] scripts/browser/index.js > public/index.js",
+    "build-browserify": "browserify --transform brfs -g [ babelify --presets [ latest ] ] scripts/browser/index.js > public/index.js",
+    "build-debug": "browserify --debug --transform brfs -g [ babelify --presets [ latest ] ] scripts/browser/index.js > public/index.js",
     "build-uglify": "uglifyjs public/index.js --mangle --compress --output public/index.js",
     "start": "node scripts/node/http-server",
     "test": "node test"

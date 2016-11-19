@@ -30,17 +30,20 @@ Curated list of my development tools, libraries and processes. Minimalism, and f
 */
 ```
 * [node.js](https://nodejs.org/) - JavaScript platform.
-    * Prefer it to node.js, is stable, is faster, is more active.
 * [NPM](https://npmjs.org/)
     * [NPM Status](http://status.npmjs.org/) - In case NPM goes down, you can get info here.
     * [registry.npmjs.eu](http://npmjs.eu/) - NPM mirror.
 * [Browserify](http://browserify.org/) - Write your browser code with node.js-style requires.
     * Why? Require.js configurations are unwanted complexity. Async module loading was not a big enough benefit. Easier sharing of core modules between client and server is sweet.
 * [Babel](https://babeljs.io/) - ES6 to ES5 transpiler.
-* [node-supervisor](https://github.com/isaacs/node-supervisor) - Restarts io.js if files change.
+* [node-supervisor](https://github.com/isaacs/node-supervisor) - Restarts node.js if files change.
     * `npm install --save supervisor`
     * Works better then Nodemon.
     * Can be installed as a local dependency.
+* Minifier
+    * [UglifyJS 2](https://github.com/mishoo/UglifyJS2) - JavaScript parser / mangler / compressor / beautifier toolkit
+    * [babili](https://github.com/babel/babili) - An ES6+ aware minifier based on the Babel toolchain
+        * Not yet as good as UglifyJS but steadily improving.
 
 ### Tasks
 * [NPM](https://npmjs.org)
@@ -102,8 +105,11 @@ Curated list of my development tools, libraries and processes. Minimalism, and f
 * [express](http://expressjs.com/) - Express is a minimal and flexible node.js web application framework, providing a robust set of features for building single and multi-page, and hybrid web applications.
     * [browserify-middleware](https://github.com/ForbesLindesay/browserify-middleware) - Server automatically browserifies modules.
         * Use environment variable NODE_ENV=production to set sensible defaults in production.
-* [LevelUP](https://github.com/rvagg/node-levelup) - Fast & simple storage - a Node.js-style LevelDB wrapper.
 * [Nodemailer](http://www.nodemailer.com/) - Nodemailer is an easy to use module to send e-mails with Node.JS.
+
+### Database
+* [gun](https://github.com/amark/gun) - A realtime, decentralized, offline-first, graph database engine.
+* [LevelUP](https://github.com/rvagg/node-levelup) - Fast & simple storage - a Node.js-style LevelDB wrapper.
 
 ## Server Tools
 * [now](https://zeit.co/now) - realtime node.js deployments

@@ -5,19 +5,11 @@
 
 'use strict';
 
-const _ = require('lodash');
 const glob = require('glob');
-const nodeunit = require('nodeunit');
-const reporter = nodeunit.reporters.default;
+const path = require('path');
 
 const pattern = process.argv.length === 3 ? process.argv[2] : '';
 
-glob(`scripts/**/*${pattern}*_test.js`, (error, files) => {
-
-    // There might be a way to do this in the glob pattern, but I couldn't find it.
-    files = _.filter(files, file => file.indexOf('/node_modules/') === -1);
-
-    reporter.run(files, null, () => {
-        process.exit();
-    });
+glob(`scripts/**/*${pattern}*_test.js`, { ignore: '**/node_modules/**' }, (error, files) => {
+	files.forEach(x => require(path.resolve(process.cwd(), x)));
 });
