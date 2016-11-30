@@ -8,13 +8,13 @@
     "compression": "1.6.2",
     "express": "4.14.0",
     "glob": "7.1.1",
-    "tape": "4.6.2",
-    "uglify-js": "2.7.4"
+    "tape": "4.6.3",
+    "uglify-js": "2.7.5"
   },
   "scripts": {
     "build": "npm run build-browserify && npm run build-uglify",
-    "build-browserify": "browserify --transform brfs -g [ babelify --presets [ latest ] ] scripts/browser/index.js > public/index.js",
-    "build-debug": "browserify --debug --transform brfs -g [ babelify --presets [ latest ] ] scripts/browser/index.js > public/index.js",
+    "build-browserify": "browserify --transform brfs --global-transform [ babelify --presets [ latest ] ] scripts/browser/index.js > public/index.js",
+    "build-debug": "browserify --debug --transform brfs --global-transform [ babelify --presets [ latest ] ] scripts/browser/index.js > public/index.js",
     "build-uglify": "uglifyjs public/index.js --mangle --compress --output public/index.js",
     "start": "node scripts/node/http-server",
     "test": "node test"

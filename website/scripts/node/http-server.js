@@ -5,7 +5,7 @@
 
 'use strict';
 
-const HTTP_SERVER_PORT = 8888;
+const HTTP_SERVER_PORT = 80;
 
 const browserifyMiddleware = require('browserify-middleware');
 const babelify = require('babelify');
@@ -19,7 +19,13 @@ const app = express();
 app.use(compression());
 app.use(express.static(PUBLIC_PATH));
 
-// use only while developing with es6 browser, comment out and use 'npm build' for best browser compatability
-app.get('/index.js', browserifyMiddleware(path.join(__dirname, '../browser/index.js'), { transform: ['brfs', babelify]}));
+// use only while developing, comment out and use 'npm build' for best performance
+app.get('/index.js', browserifyMiddleware(path.join(__dirname, '../browser/index.js'), {
+	transform: [
+		'brfs',
+		[babelify, {presets: ['latest']}]
+	]
+}));
+
 
 app.listen(HTTP_SERVER_PORT);
